@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html><!--HTML5 doctype-->
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Pragma" content="no-cache">
+<script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+<script type="text/javascript" language="javascript">
+    var isIntel=window.intel&&window.intel.xdk
+    // This event handler is fired once the intel libraries are ready
+    function onDeviceReady() {
+        //hide splash screen now that our app is ready to run
+        intel.xdk.device.hideSplashScreen();
+        setTimeout(function () {
+            $.ui.launch();
+        }, 50);
+    }
+    //initial event handler to detect when intel is ready to roll
+    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+</script>
+<script src="js/appframework.ui.min.js"></script>
+<script>
+    if(isIntel)
+        $.ui.autoLaunch = false;
+    $.ui.useOSThemes = true; //Change this to false to force a device theme
+    $.ui.blockPageScroll();
+    $(document).ready(function () {
+        if ($.ui.useOSThemes && (!$.os.ios||$.os.ios7))
+            $("#afui").removeClass("ios");
+    });
+</script>
+<script language="JavaScript">
+    function testResults (form) {
+        var TestVar = form.myemail.value;
+        alert ("You typed: " + TestVar + ". Message was sended to ferreteriazoko.com");
+    }
+    function mailMe(form){
+        //var Subject = form.myemail.value;
+        //var CC= form.myemail.value;
+        //var BCC= "ignat99@gmail.com";
+        //location = "http://noolite-server.herokuapp.com/ferreteriazoko?subject="+Subject+"&Bcc="+BCC+"&cc="+CC;
+        return true;
+}
+</script>
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/af.ui.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="afui" class="ios">
+    <div id="header" class="header"></div>
+    <div id="content" style="">
+        <div class="panel" title="Main" data-nav="nav_0" id="main" selected="selected"
+        style="background-color: rgb(255, 255, 255);" data-appbuilder-object="page">
+
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/Ferreteriazoko1.jpg" style="width: 283px; height: 212px;" alt="Title"
+                data-appbuilder-object="image" class="" title="Ferreteria Zoko 1">
+                <img src="images/Ferreteriazoko.gif" style="width: 283px; height: 142px;" alt="Title"
+                data-appbuilder-object="image" class="" title="Ferreteria Zoko">
+                <div class="text_item" data-appbuilder-object="text" style="color: rgb(0, 0, 0);">Centro Comercial Alcazaba Zoco
+                    <br>Gran vía La Manga s/n km 4
+                    <br>C.P:30380 La Manga-San Javier-Murcia
+                    <br>Teléfono: + 34 968 14 00 97
+                    <br>Fax: +34 968 14 39 36
+                    <br>ferreteriazoko@gmail.com
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Areas" data-nav="nav_0" id="page_1" data-appbuilder-object="page"
+        style="">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_2">Nautica</a>
+                    </li>
+                    <li><a href="#">Drogueria</a>
+                    </li>
+                    <li><a href="#">Pintura</a>
+                    </li>
+                    <li><a href="#page_17">Fontaneria</a>
+                    </li>
+                    <li><a href="#page_16">Menaje</a>
+                    </li>
+                    <li><a href="#page_19">Bano</a>
+                    </li>
+                    <li><a href="#page_15">Ferreteria</a>
+                    </li>
+                    <li><a href="#page_14">Electricidad</a>
+                    </li>
+                    <li><a href="#">Electrodomesticos</a>
+                    </li>
+                    <li><a href="#page_13">Jardineria</a>
+                    </li>
+                    <li><a href="#">Animales</a>
+                    </li>
+                    <li><a href="#page_18">Playa</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Nautica" data-nav="nav_0" id="page_2" data-appbuilder-object="page"
+        style="" data-footer="footer_1">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_3">Chalecos Salvavidas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Chalecos Salvavidas" data-nav="nav_0" id="page_3" data-appbuilder-object="page"
+        style="" data-footer="footer_9">
+            <div class="container" style="width: 100%; height: 100%; position: relative;" data-appbuilder-object="container">
+                <img src="images/18527.jpeg" style="width: 80%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="">
+                    <br>Chaleco Salvavidas
+                    <br>
+                    <br>100NWT
+                    <br>
+                    <br>
+                </div>
+                <div class="toggle_element form_element" style="overflow: hidden;" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_74429" class="toggle">
+                    <label for="toggle_74429" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Registro" data-nav="nav_0" id="page_4" data-appbuilder-object="page"
+        style="" data-footer="footer_18">
+            <div class="container" style="width: 100%; position: relative;" data-appbuilder-object="container">
+                <div class="text_item" data-appbuilder-object="text">Para informacion sobre descuentos de producto envianos tu e-mail:</div>
+
+
+                <div class="grid ui-sortable-placeholder" style="visibility: hidden; height: 54px;"></div>
+                <form name="myform" action=" http://noolite-server.herokuapp.com/ferreteriazoko"
+                style="width: 100%; min-height: 250px; position: relative;" data-appbuilder-object="form"
+                class="" method="post" enctype="application/x-www-form-urlencoded" onsubmit="return mailMe(this.form)">
+                    <label for="myemail">Envianos tu e-mail direccion:</label>
+                    <input type="email" name="myemail" placeholder="me@mycompany.com">
+                    <input type="submit" value="Enviar" onclick="testResults(this.form)">
+
+                </form>
+
+                <div class="grid" data-appbuilder-object="grid3" style="width: 283px; height: 54px; position: relative; z-index: 1000; left: 0px; top: 0px;">
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Gardena Programador" data-nav="nav_0" id="page_5" data-appbuilder-object="page"
+        style="" data-footer="footer_10">
+            <div class="container" style="width: 100%; height: 100%; position: relative;" data-appbuilder-object="container">
+                <img src="images/programadorc1060plusgardena.jpg" style="width: 80%; height: 80%;"
+                alt="Title" data-appbuilder-object="image" class="" title="Progr.C1060PLUS Gardena">
+                <div class="text_item" data-appbuilder-object="text" style="">Programador C1060Plus Gardena.
+                    <br>PRECIO: 126 euros</div>
+                <div class="toggle_element form_element" style="overflow: hidden;" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_57837" class="toggle">
+                    <label for="toggle_57837" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="LED Bombillas" data-nav="nav_0" id="page_6" data-appbuilder-object="page"
+        style="" data-footer="footer_11">
+            <div class="container" style="width: 100%; height: 100%; position: relative;" data-appbuilder-object="container">
+                <img src="images/Bombillaled.jpg" style="width: 80%; height: 80%;" alt="Title"
+                data-appbuilder-object="image" class="" title="LED Bombillas">
+                <div class="text_item" data-appbuilder-object="text" style="">Bombilla LED 5W(35w) 400 Lumens. 90% Ahorro. 25.000 horas uso
+                    <br>PRECIO: 5,50 euros</div>
+                <div class="toggle_element form_element" style="overflow:hidden" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_60218" class="toggle">
+                    <label for="toggle_60218" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="DREMEL Trio" data-nav="nav_0" id="page_7" data-appbuilder-object="page"
+        style="" data-footer="footer_12">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/DREMELtrio.jpg" style="width: 80%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title="DREMEL Trio">
+                <div class="text_item" data-appbuilder-object="text" style="">DREMEL Trio; Corta, Lija y Fresa.
+                    <br>PRECIO: 173,40 euros</div>
+                <div class="toggle_element form_element" style="overflow: hidden;" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_60219" class="toggle">
+                    <label for="toggle_60219" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Caja Fuerte LK:2501" data-nav="nav_0" id="page_8" data-appbuilder-object="page"
+        style="" data-footer="footer_13">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/CK2501.jpg" style="width: 80%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="Caja Fuerte LK:2501">
+                <div class="text_item" data-appbuilder-object="text" style="">CAJA FUERTE LK:2501
+                    <br>PRECIO: 225 euros</div>
+                <div class="toggle_element form_element" style="overflow:hidden" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_60220" class="toggle">
+                    <label for="toggle_60220" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="GUISON 5L" data-nav="nav_0" id="page_9" data-appbuilder-object="page"
+        style="" data-footer="footer_14">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/Guison5l.jpg" style="width: 80%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="GUISON 5L">
+                <div class="text_item" data-appbuilder-object="text" style="">Cazuela Hierro Fundido 5L para CALDERO
+                    <br>PRECIO: 79,40 euros</div>
+                <div class="toggle_element form_element" style="overflow: hidden;" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_60221" class="toggle">
+                    <label for="toggle_60221" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Grifo Monomando " data-nav="nav_0" id="page_10" data-appbuilder-object="page"
+        style="" data-footer="footer_15">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/Grifomonomando.jpg" style="width: 80%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title=" Grifo Monomando">
+                <div class="text_item" data-appbuilder-object="text" style="">Grifo Monomando Lavabo Flexinort.
+                    <br>PRECIO: 22,50 euros</div>
+                <div class="toggle_element form_element" style="overflow: hidden;" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_60222" class="toggle">
+                    <label for="toggle_60222" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="GRESPO Sillon" data-nav="nav_0" id="page_11" data-appbuilder-object="page"
+        style="width: 100%; height: 100%;" data-footer="footer_16">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/cresposillon.png" style="width: 80%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title=" GRESPO Sillon">
+                <div class="text_item" data-appbuilder-object="text" style="">CRESPO Sillon Multipieza Aluminio 6 posiciones
+                    <br>PRECIO: 64,50 euros</div>
+                <div class="toggle_element form_element" style="overflow:hidden" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_60223" class="toggle">
+                    <label for="toggle_60223" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Calentador Electrico" data-nav="nav_0" id="page_12" data-appbuilder-object="page"
+        style="" data-footer="footer_17">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/Calentadorelectriconegarra.jpg" style="width: 80%; height: auto;"
+                alt="Title" data-appbuilder-object="image" class="" title=" Calentador Electrico">
+                <div class="text_item" data-appbuilder-object="text" style="">Calentador Electrico NEGARRA 50 Litros
+                    <br>PRECIO: 190 euros</div>
+                <div class="toggle_element form_element" style="overflow: hidden;" data-appbuilder-object="toggle">
+                    <label>Enviar Descuento</label>
+                    <input type="checkbox" id="toggle_60224" class="toggle">
+                    <label for="toggle_60224" data-on="On" data-off="Off"><span></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Jardineria" data-nav="nav_0" id="page_13" data-appbuilder-object="page"
+        style="" data-footer="footer_2">
+            <div class="container" style="width:100%" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_5">Gardena Programador</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Electricidad" data-nav="nav_0" id="page_14" data-appbuilder-object="page"
+        style="" data-footer="footer_3">
+            <div class="container" style="width:100%" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_6">LED Bombillas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Ferreteria" data-nav="nav_0" id="page_15" data-appbuilder-object="page"
+        style="" data-footer="footer_4">
+            <div class="container" style="width:100%" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_7">DREMEL Trio</a>
+                    </li>
+                    <li><a href="#page_8">Caja Fuerte LK:2501</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Menaje" data-nav="nav_0" id="page_16" data-appbuilder-object="page"
+        style="" data-footer="footer_5">
+            <div class="container" style="width:100%" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_9">GUISON 5L</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Fontaneria" data-nav="nav_0" id="page_17" data-appbuilder-object="page"
+        style="" data-footer="footer_6">
+            <div class="container" style="width:100%" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_10">Grifo Monomando</a>
+                    </li>
+                    <li><a href="#page_12">Calentador Electrico</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Playa" data-nav="nav_0" id="page_18" data-appbuilder-object="page"
+        style="" data-footer="footer_7">
+            <div class="container" style="width:100%" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list">
+                    <li><a href="#page_11">GRESPO Sillon</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Bano" data-nav="nav_0" id="page_19" data-appbuilder-object="page"
+        style="" data-footer="footer_8">
+            <div class="container" style="width:100%" data-appbuilder-object="container">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_10">Grifo Monomando</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="navbar" class="footer"> <a href="#page_1" class="icon magnifier">Areas</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_4" class="icon basket">Productos</a>
+    </div>
+    <header id="header_0" data-appbuilder-object="header">
+        <a id="backButton" href="#" class="button back" style="visibility: visible; ">Back</a>
+        <h1 id="pageTitle" class="">test</h1> 
+    </header>
+    <nav id="nav_0" data-appbuilder-object="nav">
+        <h1>Side Menu</h1>
+    </nav>
+    <footer id="footer_1" data-appbuilder-object="footer"><a href="#page_19" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_13" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_2" data-appbuilder-object="footer"><a href="#page_2" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_14" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_3" data-appbuilder-object="footer"><a href="#page_13" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_15" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_4" data-appbuilder-object="footer"><a href="#page_14" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_16" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_5" data-appbuilder-object="footer"><a href="#page_15" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_17" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_6" data-appbuilder-object="footer"><a href="#page_16" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_18" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_7" data-appbuilder-object="footer"><a href="#page_17" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_19" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_8" data-appbuilder-object="footer"><a href="#page_18" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_2" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_9" data-appbuilder-object="footer"><a href="#page_4" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_5" class="icon right">Siguiente</a>
+    </footer>
+    <header id="header_1" data-appbuilder-object="header"> <a id="backButton" href="#" class="button">Back</a>
+        <h1 class="">Custom Title</h1> 
+    </header>
+    <footer id="footer_10" data-appbuilder-object="footer"><a href="#page_3" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_6" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_11" data-appbuilder-object="footer"><a href="#page_5" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_7" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_12" data-appbuilder-object="footer"><a href="#page_6" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_8" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_13" data-appbuilder-object="footer"><a href="#page_7" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_9" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_14" data-appbuilder-object="footer"><a href="#page_8" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_10" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_15" data-appbuilder-object="footer"><a href="#page_9" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_11" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_16" data-appbuilder-object="footer"><a href="#page_10" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_12" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_17" data-appbuilder-object="footer"><a href="#page_11" class="icon left">Anterior</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_4" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_18" data-appbuilder-object="footer"><a href="#page_1" class="icon magnifier">Areas</a><a href="#main" class="icon home">Inicio</a>
+        <a href="#page_3" class="icon right">Siguiente</a>
+    </footer>
+</div>
+</body>
+
+
+
+
+
+</html>
